@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color:#0a0c14;
+    font-family: Roboto;
+}
+#url{
+    font-size: 24px;
+    background:#141727;
+    color:#fff;
+    border:none;
+    border-radius: 16px 0 0 16px;
+    outline:none;
+    height: calc(60px - 12px);
+    padding: 6px 18px;
+    width: calc(100% - 200px - 56px);
+}
+
+.block{
+    width: 50vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) 
+}
+.input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#makeshorterBtn{
+    width: 200px;
+    height: 60px;
+    background: #353ff5;
+    color:#fff;
+    font-size: 24px;
+    border-radius: 0 16px 16px 0;
+    cursor:pointer;
+    /* margin-left: 16px; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#makeshorterBtn:active{
+    background: #161ff5;
+}
+.title{
+    color:#fff;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+@keyframes rotate-forever {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+.loading-spinner {
+  animation-duration: 0.75s;
+  animation-iteration-count: infinite;
+  animation-name: rotate-forever;
+  animation-timing-function: linear;
+
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffffff;
+  border-right-color: transparent;
+  border-radius: 50%;
+  display: none;
+}
+
+.disabled{
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+
+.output{
+    width:100%;
+    margin-top: 20px;
+    color:#fff;
+    font-size: 24px;
+    /* font-weight: 600; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #252d42;
+    border-radius: 8px;
+    height: 60px;
+    display: none;
+    transition: display 1s;
+}
+
+#copy-url{
+    /* display: inline-block; */
+    fill:#eaeaea;
+    height: 30px;
+    width: 30px;
+    margin-left: 16px;
+    cursor: pointer;
+}
+#copy-url:hover path{
+    fill:#eaeaea;
+}
+
+.short-url{
+    outline:none;
+    padding-left: 8px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    max-width: 500px;
+}
+@media screen and (max-width: 600px) {
+    .block{
+        width: 100vw;
+    }
+    #url{
+        width:60%;
+    }
+    #makeshorterBtn{
+        width: 30%;
+        font-size: 16px;
+    }
+    .input{
+        width: 90%;
+        margin: auto;
+    }
+}
